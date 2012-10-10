@@ -6,115 +6,115 @@ alter table Campuses
        nickname varchar2(20));
 
 update Campuses
-   set region = 'Southern California',
+   set region = 'Southern California'
    where (county  ),
 
 update Campuses
-   set region = 'Central Coast',
+   set region = 'Central Coast'
    where (county = 'Santa Barbra' or county = 'San Luis Obispo' 
       or county = 'Monterey' or county = 'Santa Cruz'
       or county = 'San Benito');
 
 update Campuses
-   set region = 'Central Valley',
+   set region = 'Central Valley'
    where county
 
 update Campuses
-   set region = 'Northern California',
+   set region = 'Northern California'
    where
 
 rem adding mascotts to the universites
 
 update Campuses
-   set nickname = 'roadrunners',
+   set nickname = 'roadrunners'
    where campus 'california State University-Bakersfield';
 
 update Campuses
-   set nickname = 'Dolphins',
-   where campus 'california State University-Channel Islands';
+   set nickname = 'Dolphins'
+   where campus 'California State University-Channel Islands';
 
 update Campuses
-   set nickname = 'Wildcats',
-   where campus 'california State University-Chico';
+   set nickname = 'Wildcats'
+   where campus 'California State University-Chico';
 
 update Campuses
-   set nickname = 'Toros',
-   where campus 'california State University-Domingues Hills';
+   set nickname = 'Toros'
+   where campus 'California State University-Domingues Hills';
 
 update Campuses
-   set nickname = 'Pioneers',
-   where campus 'california State University-East Bay';
+   set nickname = 'Pioneers'
+   where campus 'California State University-East Bay';
 
 update Campuses
-   set nickname = 'Bulldogs',
+   set nickname = 'Bulldogs'
    where campus 'Fresno State University';
 
 update Campuses
-   set nickname = 'Titans',
-   where campus 'california State University-Fullerton';
+   set nickname = 'Titans'
+   where campus 'California State University-Fullerton';
 
 update Campuses
-   set nickname = 'Lumberjacks',
+   set nickname = 'Lumberjacks'
    where campus 'Humboldt State University';
 
 update Campuses
-   set nickname = '49ers',
+   set nickname = '49ers'
    where campus 'Long Beach State University';
 
 update Campuses
-   set nickname = 'Golden Eagles',
-   where campus 'california State University-Los Angeles';
+   set nickname = 'Golden Eagles'
+   where campus 'California State University-Los Angeles';
 
 update Campuses
-   set nickname = 'Keelhaulers',
-   where campus 'california Maritime Academy';
+   set nickname = 'Keelhaulers'
+   where campus 'California Maritime Academy';
 
 update Campuses
-   set nickname = 'Otters',
-   where campus 'california State University-Montery Bay';
+   set nickname = 'Otters'
+   where campus 'California state university-montery bay';
 
 update Campuses
-   set nickname = 'Matadors',
-   where campus 'california State University-Northridge';
+   set nickname = 'Matadors'
+   where campus 'California State University-Northridge';
 
 update Campuses
-   set nickname = 'Brancos',
-   where campus 'california State University-Pomona';
+   set nickname = 'Brancos'
+   where campus 'California State University-Pomona';
 
 update Campuses
-   set nickname = 'Hornets',
-   where campus 'california State University-Sacramento';
+   set nickname = 'Hornets'
+   where campus 'California State University-Sacramento';
 
 update Campuses
-   set nickname = 'Coyotes',
-   where campus 'california State University-San Bernardino';
+   set nickname = 'Coyotes'
+   where campus 'California State University-San Bernardino';
 
 update Campuses
-   set nickname = 'Aztecs',
+   set nickname = 'Aztecs'
    where campus 'San Diego State University';
 
 update Campuses
-   set nickname = 'Gators',
+   set nickname = 'Gators'
    where campus 'San Francisco State University';
 
 update Campuses
-   set nickname = 'Spartans',
+   set nickname = 'Spartans'
    where campus 'San Jose State University';
 
 update Campuses
-   set nickname = 'Mustangs',
+   set nickname = 'Mustangs'
    where campus 'California Polytechnic State University-San Luis Obispo';
 
 update Campuses
-   set nickname = 'Cougars',
-   where campus 'california State University-San Marcos';
+   set nickname = 'Cougars'
+   where campus 'California State University-San Marcos';
 
 update Campuses
-   set nickname = 'Seawolves',
+   set nickname = 'Seawolves'
    where campus 'Sonoma State University';
 
 update Campuses
-   set nickname = 'Warriors',
-   where campus 'california State University-Stanislaus';
+   set nickname = 'Warriors'
+   where campus 'California State University-Stanislaus';
 
 select *from Campuses;
