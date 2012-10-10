@@ -5,7 +5,7 @@ Create Table Campuses(
    Id INTEGER PRIMARY KEY,
    Campus VARCHAR2(64),
    Location VARCHAR2(64),
-   Country VARCHAR2(64),
+   County VARCHAR2(64),
    Year INTEGER
 );
 
