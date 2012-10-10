@@ -2,7 +2,7 @@ rem Kevin Shibata
 rem kkshiba@caloply.edu
 
 create table marathon (
-   Place integer,
+   Place integer PRIMARY KEY,
    Time date,
    Pace date,
    GroupPlace integer,

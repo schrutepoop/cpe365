@@ -12,13 +12,15 @@ Create Table Campuses(
 Create Table CsuFees (
    Campus INTEGER REFERENCES Campuses,
    Year INTEGER,
-   CampusFee INTEGER
+   CampusFee INTEGER,
+   PRIMARY KEY(Campus, Year)
 ); 
 
 Create Table Degrees(
    Year INTEGER,
    Campus Integer References Campuses,
-   Degrees INTEGER
+   Degrees INTEGER,
+   PRIMARY KEY(Campus, Year)
 );
 
 Create Table Disciplines(
@@ -31,18 +33,21 @@ Create Table DisciplineEnrollemnts(
    Discipline INTEGER references Disciplines,
    Year INTEGER,
    Undergraduate INTEGER,
-   Graduate INTEGER
+   Graduate INTEGER,
+   PRIMARY KEY(Campus, Year, Discipline)
 );
  
 Create Table Enrollments (
    Campus integer references Campuses,
    Year INTEGER,
    TotalEnrollment_AY INTEGER,
-   FTE_AY INTEGER
+   FTE_AY INTEGER,
+   PRIMARY KEY(Campus, Year)
 );
 
 Create Table Faculty (
    Campus integer references Campuses,
    Year integer,
    Faculty integer 
+   PRIMARY KEY(Campus, Year)
 );

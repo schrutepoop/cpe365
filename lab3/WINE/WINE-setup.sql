@@ -12,14 +12,13 @@ create table appelations (
 
 create table grapes (
    Id integer,
-   Grape varchar2(20),
-   Color varchar2(20),
-   PRIMARY KEY (Id, Grape)
+   Grape varchar2(20) PRIMARY KEY,
+   Color varchar2(20)
 );
 
 create table wine(
    No integer PRIMARY KEY,  
-   Grape varchar2(20) REFERENCES grapes,
+   Grape varchar2(20) REFERENCES Grape,
    Winery varchar2(20),
    Appelation varchar(20) REFERENCES appelations,
    Name varchar2(20),

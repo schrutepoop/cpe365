@@ -12,7 +12,7 @@ create table Rooms (
 );
 
 create table Reservatons (
-   Code integer,
+   Code integer PRIMARY KEY,
    Room char(3) REFERENCES Rooms,
    CheckIn date,
    CheckOut date,
@@ -20,7 +20,6 @@ create table Reservatons (
    LasteName varchar2(20),
    FirstName varchar2(20),
    Adults integer,
-   Kids integer,
-   PRIMARY KEY (adults, LastName, FirstName)
+   Kids integer
 );
  
