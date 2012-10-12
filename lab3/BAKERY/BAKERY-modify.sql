@@ -5,82 +5,82 @@ alter table costomers
    add (town varchar2(40),
        state char(2)); 
 update costomers
-   set town = "is",
-      state = "CO"
-   where Id = 0;
-update costomers
-   set town = "omg",
-      state = "KS"
+   set town = "Borger",
+      state = "TX"
    where Id = 1;
 update costomers
-   set town = "stanley",
-      state = "KS"
+   set town = "Clayton",
+      state = "NM"
    where Id = 2;
 update costomers
-   set town = "is",
-      state = "CO"
+   set town = "Oklahoma City",
+      state = "OK"
    where Id = 3;
 update costomers
-   set town = "city1",
-      state = "TX"
+   set town = "Liberal",
+      state = "KS"
    where Id = 4;
 update costomers
-   set town = "omg",
-      state = "KS"
+   set town = "Dumas",
+      state = "TX"
    where Id = 5;
 update costomers
-   set town = "starbuck",
-      state = "CO"
+   set town = "Clayton",
+      state = "NM"
    where Id = 6;
 update costomers
-   set town = "city4",
+   set town = "Edmond",
       state = "OK"
    where Id = 7;
 update costomers
-   set town = "starbuck",
-      state = "CO"
+   set town = "Hugoton",
+      state = "KS"
    where Id = 8;
 update costomers
-   set town = "cit5",
-      state = "OK"
+   set town = "Liberal",
+      state = "KS"
    where Id = 9;
 update costomers
-   set town = "over",
+   set town = "Springfield",
       state = "CO"
    where Id = 10;
 update costomers
-   set town = "what",
-      state = "NM"
+   set town = "Liberal",
+      state = "KS"
    where Id = 11;
 update costomers
-   set town = "is",
-      state = "CO"
+   set town = "Clayton",
+      state = "NM"
    where Id = 12;
 update costomers
-   set town = "starbuck",
-      state = "CO"
+   set town = "Dalhart",
+      state = "TX"
    where Id = 13;
 update costomers
-   set town = "yeahhh",
-      state = "NM"
+   set town = "Edmond",
+      state = "OK"
    where Id = 14;
 update costomers
-   set town = "cit5",
+   set town = "Edmond",
       state = "OK"
    where Id = 15;
 update costomers
-   set town = "is",
-      state = "CO"
+   set town = "Edmond",
+      state = "OK"
    where Id = 16;
 update costomers
-   set town = "city2",
-      state = "TX"
+   set town = "Springfield",
+      state = "CO"
    where Id = 17;
 update costomers
-   set town = "stanley",
-      state = "KS"
+   set town = "Springfield",
+      state = "CO"
    where Id = 18;
 update costomers
-   set town = "wtf",
-      state = "KS"
+   set town = "Dalhart",
+      state = "TX"
    where Id = 19;
+update costomers
+   set town = "Liberal",
+      state = "KS"
+   where Id = 20;

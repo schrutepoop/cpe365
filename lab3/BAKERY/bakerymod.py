@@ -5,11 +5,11 @@ import random
 f = open("BAKERY-modify.sql", "w")
 
 locations = [
-   ('OK', ['city4','cit5','shit']),
-   ('TX', ['city1', 'city2', 'city3']),
-   ('NM', ['cool','yeahhh','what']),
-   ('KS', ['stanley','wtf', 'omg']),
-   ('CO', ['starbuck','is','over']),
+   ('OK', ['Enid','Edmond', 'Oklahoma City']),
+   ('TX', ['Dumas', 'Borger', 'Dalhart']),
+   ('NM', ['Clayton']),
+   ('KS', ['Liberal','Hugoton']),
+   ('CO', ['Springfield']),
 ]
 
 
@@ -20,8 +20,8 @@ alter table costomers
    add (town varchar2(40),
        state char(2)); 
 ''')
-
-for i in range(20):
+i = 1
+for i in range(1,21):
    location = random.choice(locations)
    state = location[0]
    town =  random.choice(location[1])
