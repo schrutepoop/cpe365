@@ -22,7 +22,7 @@ create table wine(
    Winery varchar2(20),
    Appelation varchar(20) REFERENCES appelations,
    Name varchar2(20),
-   Year Date,
+   Year integer,
    Price float,
    Score integer,
    Cases integer,

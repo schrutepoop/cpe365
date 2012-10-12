@@ -46,3 +46,4 @@ update list
    set busroute = 0
    where busroute is null;
 
+select * from list;
