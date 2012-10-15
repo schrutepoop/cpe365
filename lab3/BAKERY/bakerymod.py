@@ -16,7 +16,7 @@ locations = [
 f.write('''rem kevin shibata
 rem kkshibat@calpoly.edu
 
-alter table costomers
+alter table customers
    add (town varchar2(40),
        state char(2)); 
 ''')
@@ -26,7 +26,7 @@ for i in range(1,21):
    state = location[0]
    town =  random.choice(location[1])
    f.write(
-'''update costomers
+'''update customers
    set town = "%s",
       state = "%s"
    where Id = %d;

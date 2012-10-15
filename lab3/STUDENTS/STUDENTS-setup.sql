@@ -6,12 +6,12 @@ create table list (
    sfirstName varchar2(25),
    Grade integer,
    classroom integer,
-   PRIMARY KEY(LastName, FirstName, Grade, classroom)
+   PRIMARY KEY(sLastName, sFirstName, Grade, classroom)
 );
 
 create table teachers (
-   LastName varchar(25),
-   FirstName varchar(25),
+   LastName varchar2(25),
+   FirstName varchar2(25),
    Classroom integer PRIMARY KEY
 );
 
