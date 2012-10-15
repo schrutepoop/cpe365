@@ -3,7 +3,7 @@ rem kkshibat@calpoly.edu
 
 alter table wine
    add (bestfrom integer,
-      bestto integer;
+      bestto integer);
 
 rem doing white wines first  
 update wine
