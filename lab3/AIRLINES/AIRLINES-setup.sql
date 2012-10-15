@@ -3,7 +3,7 @@ rem kkshibat@calpoly.edu
 
 create table airlines (
    Id integer PRIMARY KEY,
-   Ariline varchar2(64) NOT NULL,
+   Airline varchar2(64) NOT NULL,
    Abbreviation varchar2(64) NOT NULL,
    Country varchar2(64) NOT NULL
 );

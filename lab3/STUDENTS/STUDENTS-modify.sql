@@ -26,9 +26,9 @@ rem upadating the bus routes
 
 update list
    set busroute = 51
-   where (FirstName = "ELTON" and LastName = "FULVIO") 
-   or (FirstName = "ANIKA" and LastName = "YUEN")
-   or (FirstName = "JANEE" and LastName = "DANESE");
+   where (sfirstName = "ELTON" and slastName = "FULVIO") 
+   or (sfirstName = "ANIKA" and slastName = "YUEN")
+   or (sfirstName = "JANEE" and slastName = "DANESE");
 
 update list 
    set busroute = 52
@@ -36,11 +36,11 @@ update list
 
 update lsit 
    set busroute = 53
-   where Classroom = 112 and not (Firstname = "STORMY" and LastName = "KRISTENSEN");
+   where Classroom = 112 and not (sFirstname = "STORMY" and sLastName = "KRISTENSEN");
 
 update list 
    set busroute = 54
-   where  (FirstName = "STORMY" and LastName = "KRISTENSEN");
+   where  (sfirstName = "STORMY" and sLastName = "KRISTENSEN");
 
 update list
    set busroute = 0

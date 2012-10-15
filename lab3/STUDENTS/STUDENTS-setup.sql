@@ -2,16 +2,16 @@ rem Kevin Shibata
 rem kkshibat@calpoly.edu
 
 create table list (
-   LastName varchar2(64),
-   FirstName varchar2(64),
+   SlastName varchar2(25),
+   sfirstName varchar2(25),
    Grade integer,
    classroom integer,
    PRIMARY KEY(LastName, FirstName, Grade, classroom)
 );
 
 create table teachers (
-   LastName varchar(64),
-   FirstName varchar(64),
+   LastName varchar(25),
+   FirstName varchar(25),
    Classroom integer PRIMARY KEY
 );
 
