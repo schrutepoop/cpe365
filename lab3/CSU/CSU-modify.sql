@@ -7,9 +7,9 @@ alter table Campuses
 
 update Campuses
    set region = 'Southern California'
-   where  (county = 'Ventura' or county = 'Los Angeles' or county = county =
-'Orange' or county =  or county = 'San Diego' or county = 'Imperial' or county =
-county 'Riverside' or county = 'San Bernardino');
+   where (county = 'Ventura' or county = 'Los Angeles' or county = 'Orange'
+    or county = 'San Diego' or county = 'Imperial' 
+    or county = 'Riverside' or county = 'San Bernardino');
 
 update Campuses
    set region = 'Central Coast'
@@ -19,26 +19,26 @@ update Campuses
 
 update Campuses
    set region = 'Central Valley'
-   where (county = 'Sacramento' or county = 'Kern' or county = 'Inyo' or county
-= 'Fresno' or county = 'Santa Clara' or county = 'Kings' or county = 'Mariposa'
-or county = 'Mono' or county = 'Stanislaus' or county = 'San Joaquin' or campus
-= 'Solano' or county = 'Alpine');
+   where (county = 'Sacramento' or county = 'Kern' or county = 'Inyo' 
+      or county = 'Fresno' or county = 'Santa Clara' or county = 'Kings' or county = 'Mariposa'
+      or county = 'Mono' or county = 'Stanislaus' or county = 'San Joaquin' 
+      or county = 'Solano' or county = 'Alpine');
 
 update Campuses
    set region = 'Northern California'
-   where (county = 'Sonoma' or county = 'Napa' or county = 'Yolo' or county =
-'El Dorado' or county = 'Butte'
+   where (county = 'Sonoma' or county = 'Napa' or county = 'Yolo' 
+      or county = 'El Dorado' or county = 'Butte' or county = 'Humboldt');
 
 update Campuses
-   set regin = 'Bay Area'
-   where (county = 'San Fransisco' or county =
-'Alameida' or county = 'Contra Costa' county = 'Marin' or county = 'San Mateo');
+   set region = 'Bay Area'
+   where (county = 'San Francisco' or county = 'Alameida' 
+      or county = 'Contra Costa' or county = 'Marin' or county = 'San Mateo');
 
 rem adding mascotts to the universites
 
 update Campuses
    set nickname = 'roadrunners'
-   where campus = 'california State University-Bakersfield';
+   where campus = 'California State University-Bakersfield';
 
 update Campuses
    set nickname = 'Dolphins'
@@ -50,7 +50,7 @@ update Campuses
 
 update Campuses
    set nickname = 'Toros'
-   where campus = 'California State University-Domingues Hills';
+   where campus = 'California State University-Dominguez Hills';
 
 update Campuses
    set nickname = 'Pioneers'
@@ -82,7 +82,7 @@ update Campuses
 
 update Campuses
    set nickname = 'Otters'
-   where campus = 'California state university-montery bay';
+   where campus = 'California State University-Monterey Bay';
 
 update Campuses
    set nickname = 'Matadors'
@@ -90,7 +90,7 @@ update Campuses
 
 update Campuses
    set nickname = 'Brancos'
-   where campus = 'California State University-Pomona';
+   where campus = 'California State Polytechnic University-Pomona';
 
 update Campuses
    set nickname = 'Hornets'

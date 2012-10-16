@@ -10,7 +10,7 @@ INSERT INTO Campuses VALUES (7,'California State University-Fullerton','Fullerto
 INSERT INTO Campuses VALUES (8,'Humboldt State University','Arcata','Humboldt',1913);
 INSERT INTO Campuses VALUES (9,'Long Beach State University','Long Beach','Los Angeles',1949);
 INSERT INTO Campuses VALUES (10,'California State University-Los Angeles','Los Angeles','Los Angeles',1947);
-INSERT INTO Campuses VALUES (11,'California  Maritime Academy','Vallejo','Solano',1929);
+INSERT INTO Campuses VALUES (11,'California Maritime Academy','Vallejo','Solano',1929);
 INSERT INTO Campuses VALUES (12,'California State University-Monterey Bay','Seaside','Monterey',1994);
 INSERT INTO Campuses VALUES (13,'California State University-Northridge','Northridge','Los Angeles',1958);
 INSERT INTO Campuses VALUES (14,'California State Polytechnic University-Pomona','Pomona','Los Angeles',1938);

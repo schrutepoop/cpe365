@@ -48,6 +48,6 @@ Create Table Enrollments (
 Create Table Faculty (
    Campus integer references Campuses,
    Year integer,
-   Faculty integer 
+   Faculty integer, 
    PRIMARY KEY(Campus, Year)
 );
