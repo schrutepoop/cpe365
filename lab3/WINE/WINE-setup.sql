@@ -19,9 +19,9 @@ create table grapes (
 create table wine(
    No integer PRIMARY KEY,  
    Grape varchar2(30) REFERENCES grapes,
-   Winery varchar2(45),
+   Winery varchar2(50),
    Appelation varchar(45) REFERENCES appelations,
-   Name varchar2(45),
+   Name varchar2(50),
    Year integer,
    Price float,
    Score integer,

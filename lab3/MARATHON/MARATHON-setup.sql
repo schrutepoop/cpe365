@@ -6,13 +6,13 @@ create table marathon (
    Time date,
    Pace date,
    GroupPlace integer,
-   PartiGroup varchar2(20),
+   PartiGroup varchar2(15),
    Age integer,
    sex char(1),
    BIBNumber integer,
-   FirstName varchar2(64),
-   LastName varchar2(64),
-   Town varchar2(64),
+   FirstName varchar2(15),
+   LastName varchar2(15),
+   Town varchar2(15),
    State char(2),
    UNIQUE(GroupPlace, partigroup, sex)
 );

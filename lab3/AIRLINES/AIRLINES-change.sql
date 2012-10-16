@@ -2,30 +2,30 @@ rem kevin shibata
 rem kkshibat@calpoly.edu
 
 delete from flights
-   where not(Airline = 4 and Airline = 8);
+   where not(Airline = 4 or Airline = 8);
 
-seleft *from flights;
-
-update flights
-   set Flightno = Fightno + 1000
-   where (Airline = 8 and mod(fightno,2) = 0);
+select *from flights;
 
 update flights
-   set flightno = flightno + 1
-   where flightno > 1000;
+   set Flightno = Flightno + 10000
+   where (Airline = 8 and mod(flightno,2) = 0);
 
 update flights
-   set flightno = flightno - 1
-   where (Airline = 8 and flighno < 1000);
+   set Flightno = Flightno + 1
+   where flightno > 10000;
 
 update flights
-   set fligntno = flightno - 1000
-   where (Airline = 8 and flightno > 1000;)
+   set Flightno = Flightno - 1
+   where (airline = 8 and Flightno < 10000);
+
+update flights
+   set Flightno = Flightno - 10000
+   where (airline = 8 and Flightno > 10000);
 
 select * from flights;
 
 update flights
-   set flightno = flightno + 2000
+   set Flightno = Flightno + 2000
    where (Airline = 4);
 
 update flights
@@ -33,7 +33,7 @@ update flights
    where Airline = 8;
 
 delete from airlines
-   where airline = 'jetblue airways';
+   where airline = 'JetBlue Airways';
 
 select * from flights;
   
