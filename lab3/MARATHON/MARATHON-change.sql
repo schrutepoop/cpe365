@@ -22,11 +22,5 @@ select Place, TO_CHAR(Time, 'HH:MI.SS') AS Time,
    from marathon;
 
 alter table marathon
-   drop (GroupPlace, PartiGroup, age, sex);
-
-select Place, TO_CHAR(Time, 'HH:MI:(SS)') AS Time, BiBnumber, FirstName, LastName,
-       Town, State
-   from marathon;
-
- 
+   drop (GroupPlace, PartiGroup, age, sex, Pace, Time);
    
