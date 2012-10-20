@@ -25,7 +25,7 @@ Create Table Degrees(
 
 Create Table Disciplines(
    Id INTEGER PRIMARY KEY,
-   Name VARCHAR2(64)
+   Name VARCHAR2(30)
 );
 
 Create Table DisciplineEnrollemnts(

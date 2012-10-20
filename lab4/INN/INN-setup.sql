@@ -2,16 +2,16 @@ rem Kevin Shibata
 rem kkshibat@calpoly.edu
 
 create table Rooms (
-   RoomId char(3) PRIMARY KEY;
-   RoomName varchar2(20),
+   RoomId char(3) PRIMARY KEY,
+   RoomName varchar2(25),
    Beds integer,
    bedType varchar(10),
    maxOccupancy integer,
    BasePrice integer,
-   Decor varchar2(20),
+   Decor varchar2(20)
 );
 
-create table Reservatons (
+create table Reservations (
    Code integer PRIMARY KEY,
    Room char(3) REFERENCES Rooms,
    CheckIn date,

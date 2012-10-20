@@ -1,5 +1,5 @@
 rem kevin shibata
 rem kkshibat@hotmail.com
 
-drop table Rooms cascade constraits;
-drop table Reservations cascade constraits;
+drop table Rooms cascade constraints;
+drop table Reservations cascade constraints;
