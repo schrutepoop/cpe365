@@ -1,6 +1,9 @@
 rem kevin shibata
 rem kkshibat@ora10g
 
+set linesize 400
+set feedback 1
+
 rem query 1
 
 select distinct camp.county 

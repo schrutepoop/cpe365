@@ -4,7 +4,6 @@ rem kkshibat@calpoly.edu
 set linesize 1000;
 set pagesize 100;
 set feedback 1;
-set echo on;
 
 rem query 1
 

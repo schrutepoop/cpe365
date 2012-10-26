@@ -3,6 +3,9 @@ rem kkshibat@calpoly.edu
 
 rem query 1
 
+set linesize 400
+set feedback 1
+
 select distinct r.roomid, r.roomname, r.maxoccupancy, r.basePrice
    from rooms r
    where r.decor <> 'traditional'
@@ -44,7 +47,9 @@ union
    from rooms r, reservations res
    where      res.checkin <= TO_DATE('19-Sep-2010','DD-MON-YYYY')
           and res.checkout > TO_DATE('19-Sep-2010','DD-MON-YYYY')
-          and res.room = r.roomid));
+          and res.room = r.roomid))
+   order by 2;
+
 rem query 5
 
 (select distinct res1.lastename, res1.firstname
@@ -56,7 +61,8 @@ intersect
 (select distinct res.lastename, res.firstname
    from reservations res
    where  res.checkout <= '31-Jul-2010'
-         and res.checkin >= '1-Jul-2010');
+         and res.checkin >= '1-Jul-2010')
+   order by 1;
 
 rem query 6
 

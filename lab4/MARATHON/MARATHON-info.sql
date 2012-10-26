@@ -1,6 +1,8 @@
 rem kevin shibata
 rem kkshibat@calpoly.edu
 
+set linesize 200
+
 rem query 1
 
 select distinct m.state, m.town
@@ -21,8 +23,6 @@ select distinct m.lastname, m.firstname, m.place, to_char(m.time, 'HH:MI:SS')
          and m.sex = 'M'
    order by m.place asc;
 
-select m.town from marathon m where m.state = 'MA' and m.sex = 'M';
-
 rem query 3
 
 select distinct to_char(m.time,'HH:MI:SS') as over_all_time, m.lastname, m.firstname, m.town, m.state
@@ -34,7 +34,7 @@ select distinct to_char(m.time,'HH:MI:SS') as over_all_time, m.lastname, m.first
 
 rem query 4
 
-(select distinct m2.lastname, m2.firstname, m2.partigroup, m2.place, 
+(select distinct m2.lastname, m2.firstname, m2.partigroup, m2.place as place, 
                 m2.groupplace, to_char(m2.time,'HH:MI:SS') as running_time
    from marathon m1, marathon m2
    where     m1.bibnumber = 339
@@ -48,7 +48,8 @@ intersect
    where     m4.lastname = 'HAEDER'
          and m4.firstname = 'KEN'
          and m4.place < m3.place
-         and m3.sex = 'F');
+         and m3.sex = 'F')
+   order by place;
 
 rem query 5
 

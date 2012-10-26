@@ -1,21 +1,25 @@
 rem kevin shibata
 rem kkshiba@calpoly.edu
 
+set linesize 400
+set feedback 1
+
 rem query 1
 
 select g.flavor, g.food, g.price
    from goods g
-   where g.food = 'Tart';
+   where g.food = 'Tart'
+   order by g.price desc;
 
 rem query 2
 
 select g.id, g.flavor, g.food, g.price
-from goods g
+   from goods g
    where not(g.food = 'Eclair' 
             or (g.food = 'Cake' and (g.price <= 20.00 and g.price >=12)) 
             or g.flavor = 'Vanilla' 
             or g.price > 3.00)
-   order by g.price;
+   order by g.price asc;
 
 rem query 3
 
@@ -41,7 +45,7 @@ select r.recieptnumber, r.dop, c.lastname, c.fristname as firstname
 
 rem query 5
 
-select distinct g.food, g.flavor, r.dop
+select distinct g.food, g.flavor
    from goods g, receipts r, items i
    where r.dop = TO_DATE('31-Oct-2007','DD-MON-YYYY')
           and g.id = i.item and r.recieptnumber = i.receipt
@@ -74,14 +78,24 @@ select distinct r.dop
 
 rem query 8
 
-select distinct r.dop
-   from receipts r, receipts r2, items i, items i2, goods g
-   where g.food = 'Cake'
-         and r.dop = r2.dop
-         and g.id <> i.item
-         and i.item <> g.id
-         and i.oridanl <> i2.oridanl
-   order by r.dop;
+select distinct c1.lastname, c1.fristname
+   from receipts r1, items i1, goods g1, 
+        receipts r2, items i2, goods g2, 
+        customers c1, customers c2
+   where     g1.food = 'Cake'
+         and g2.food = 'Cake'
+         and g1.flavor <> g2.flavor
+         and r1.dop = r2.dop
+         and r1.recieptnumber = r2.recieptnumber
+         and r1.customerid = r2.customerid
+         and c1.id = c2.id
+         and c1.id = r1.customerid
+         and i1.receipt = i2.receipt
+         and i1.receipt = r1.recieptnumber
+         and i2.receipt = r2.recieptnumber
+         and g1.id = i1.item
+         and g2.id = i2.item
+   order by c1.lastname;
 
 rem query 9
 (select distinct c.lastname, c.fristname as firstname from customers c)
@@ -89,8 +103,7 @@ rem query 9
 (select distinct c.lastname, c.fristname as firstname 
    from customers c, receipts r
    where r.dop = TO_DATE('9-Oct-2007','DD-MON-YYYY')
-         and r.customerid = c.id
-  );
+         and r.customerid = c.id);
 
 rem query 10
 
@@ -102,3 +115,4 @@ select distinct g.food, g.flavor, g.price
          and c.id = r.customerid
          and i.item = g.id
          and r.recieptnumber = i.receipt;
+

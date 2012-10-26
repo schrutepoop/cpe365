@@ -19,7 +19,7 @@ select distinct a.airline, a.abbreviation
 
 rem query 3
 
-(select distinct air.airline, air.abbreviation
+(select distinct air.airline as airlinename, air.abbreviation
    from airlines air, flights f1
    where f1.sourceairport = 'NDV'
          and f1.airline = air.id)
@@ -27,7 +27,8 @@ intersect
 (select distinct a.airline, a.abbreviation
    from airlines a, flights f2
    where f2.destairport = 'CVO'
-         and f2.airline = a.id);
+         and f2.airline = a.id)
+   order by airlinename;
 
 rem query 4
 
@@ -48,7 +49,7 @@ select distinct port1.airportname, port1.airportcode
 
 rem queary 6
 
-(select distinct port1.airportname, port1.airportcode
+(select distinct port1.airportname, port1.airportcode as aircode
    from flights f1,airports100 port1
    where     f1.sourceairport <> 'NDV'
          and f1.destairport = port1.airportcode)
@@ -56,7 +57,8 @@ minus
 (select distinct port1.airportname, port1.airportcode
    from flights f1,airports100 port1
    where     f1.sourceairport = 'NDV'
-         and f1.destairport = port1.airportcode);
+         and f1.destairport = port1.airportcode)
+   order by aircode;
 
 rem query 7
 

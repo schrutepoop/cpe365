@@ -61,3 +61,38 @@ select w.winery, w.name, w.year, w.score, w.price
    where w.grape = 'Pinot Noir'
          and w.score > 94
    order by w.cases;
+
+rem query 8
+
+select w.name, w.year, (w.cases * w.price) as Revenu
+   from wine w
+   where     w.winery = 'Kosta Browne'
+         and w.grape = 'Pinot Noir'
+         and w.price is not NULL
+         and w.name is not null
+         and w.cases is not null
+   order by revenu;
+
+rem query 9
+
+select w1.grape, w1.winery, w1.score, (w1.cases * w1.price) as revenu
+   from wine w1, wine w2, appelations a1
+   where     a1.country = 'Napa'
+         and a1.appelation = w1.appelation
+         and w1.year = 2006
+         and w2.year = 2006
+         and w2.winery = 'Rosenblum'
+         and w2.appelation = 'Paso Robles'
+         and (w1.cases * w1.price) > (w2.cases * w2.price)
+   order by revenu;
+
+rem query 10
+
+select distinct w2.name
+   from wine w1, wine w2 
+   where     w1.year = w2.year
+         and w1.winery = 'Tor'
+         and w1.grape = 'Chardonnay'
+         and w2.score > w1.score
+         and w2.cases > w1.cases
+   order by w2.name;
