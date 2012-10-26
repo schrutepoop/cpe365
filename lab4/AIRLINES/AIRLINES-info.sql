@@ -81,6 +81,8 @@ select distinct a.airline, a.id
          and a.id = f2.airline
    order by a.airline;
 
+rem query 9
+
 select distinct port1.airportname, port2.airportname
    from flights f1, flights f2, airports100 port1, 
         airlines a1, airlines a2, airports100 port2
