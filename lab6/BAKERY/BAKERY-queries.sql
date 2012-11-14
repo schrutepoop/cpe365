@@ -1,6 +1,9 @@
 rem kevin shibata
 rem kkshibat@calpoly.edu
 
+set linesize 1000
+set pagesize 50
+
 rem query 1
 
 (select lastname, fristname
@@ -104,20 +107,35 @@ select c.dop, c.revenu
 
 rem query 7
 
-select c.dop, c.revenu
-   from (select dop, sum(g.price) as revenu
-         from goods g, receipts r, items i
-         where g.id = i.item and
-               r.recieptnumber = i.receipt
-         group by r.dop) c,
-         (select max(sum(g.price)) as max
-         from goods g, receipts r, items i
-         where g.id = i.item and
-               r.recieptnumber = i.receipt
-         group by r.dop) cc,
-        (select 
-         from customers c, goods g, receipts r, items i
-         where c.id = r.customerid and
-               r.recieptnumber = i.receipt and
-               i.item = g.id
-   where cc.max = c.revenu;
+select ccc.lastname, ccc.fristname, 
+       count(distinct r5.recieptnumber) as pruchases, sum(g5.price) as sum
+   from  (select cc.lastname, cc.fristname 
+          from (select c4.lastname, c4.fristname
+          from customers c4) cc
+          minus   
+          (select c1.lastname, c1.fristname
+         from customers c1, goods g1, receipts r1, items i1
+         where c1.id = r1.customerid and
+               g1.id = i1.item and
+               i1.receipt = r1.recieptnumber and
+               r1.dop = (select r2.dop  
+                  from goods g2, receipts r2, items i2
+                  where g2.id = i2.item and
+                        r2.recieptnumber = i2.receipt
+                  group by r2.dop
+                  having sum(g2.price) = (select max(sum(g3.price))
+                                          from goods g3, receipts r3, items i3
+                                          where g3.id = i3.item and
+                                                r3.recieptnumber = i3.receipt
+                                          group by r3.dop)))) ccc, customers c5, goods g5, receipts r5, items i5
+   where ccc.lastname = c5.lastname and
+         ccc.fristname = c5.fristname and
+         c5.id = r5.customerid and
+         g5.id = i5.item and
+         i5.receipt = r5.recieptnumber
+   group by ccc.lastname, ccc.fristname
+   order by sum;
+
+rem query 8
+
+ 
